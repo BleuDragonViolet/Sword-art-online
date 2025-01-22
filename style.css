@@ -1,0 +1,32 @@
+/* Style général pour le corps de la page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Empêche le défilement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Style pour la vidéo */
+video {
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    object-fit: cover; /* Adapte la vidéo pour couvrir l'écran */
+    background-color: black;
+}
+
+/* Style pour l'icône de volume */
+.volume-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

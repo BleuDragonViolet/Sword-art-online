@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sword Art Online</title>
+    <link rel="icon" type="image/png" href="img/Créateur/icon.ico">
+    <link rel="stylesheet" href="ANstyles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sword Art Online</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('personnages')">Characters</button>
+            <button onclick="showSection('monde')">World</button>
+            <button onclick="showSection('createur')">Creator</button>
+            <button onclick="showSection('info')">Information</button>
+        </nav>
+    </header>
+    <div id="custom-menu" class="custom-menu">
+        <div onclick="refreshPage()">Refresh</div>
+        <div>
+            Languages
+            <div class="submenu">
+                <div class="submenu-item" onclick="changeLanguage('fr')">
+                    <img src="img/fr.png" alt="French" class="flag-icon"> French
+                </div>
+                <div class="submenu-item" onclick="changeLanguage('en')">
+                    <img src="img/uk.png" alt="English" class="flag-icon"> English
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="section active">
+            <h2>✨ Welcome to the fascinating universe of Sword Art Online ✨</h2><br><br><br>
+
+            <div class="intro-section"
+                style="background-color: #2d2d50; color: #ffffff; font-size: 18px; padding: 30px; border-radius: 10px;">
+                <p>🌍 <span style="color: #ffcc00; font-weight: bold;">Enter a universe where adventure knows no
+                        bounds</span>! Be transported through <span style="color: #00d1ff;">breathtaking
+                        landscapes</span>, <span style="color: #00d1ff;">mysterious forests</span> of
+                    <strong>Aincrad</strong> 🌲 to the <span style="color: #ffcc00;">enchanting skies</span> of
+                    <strong>Alfheim Online</strong> 🧚‍♂️. Each environment is designed to amaze, where <span
+                        style="color: #00d1ff;">magic</span> and <span style="color: #ffcc00;">fantasy</span> meet to
+                    create unforgettable worlds. Mysteries and dangers await you 🌟.
+                </p>
+            </div>
+
+            <div class="characters-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>👥 <span style="color: #ffcc00; font-weight: bold;">Meet memorable characters</span> who will mark
+                    your epic journey. Each carries a unique story, with their dreams, fears, and hopes ❤️. From the
+                    brave <strong>Kirito</strong> to the fearless <strong>Asuna</strong>, every encounter adds depth to
+                    this adventure. You will be surrounded by <span style="color: #00d1ff;">loyal allies</span> and
+                    <span style="color: #ffcc00;">formidable foes</span>, each playing a crucial role in your quest 🛡️.
+                </p>
+            </div>
+
+            <div class="adventure-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>⚔️ <span style="color: #ffcc00; font-weight: bold;">Experience epic adventures</span> where every
+                    decision can change your destiny ⚡. In the universe of <em>Sword Art Online</em>, every quest is a
+                    test of <span style="color: #ffcc00;">courage</span> and <span
+                        style="color: #00d1ff;">strategy</span>. Each floor of <strong>Aincrad</strong> is a battlefield
+                    where colossal boss fights 🐉 challenge your worth. Solve puzzles 🧩, face mysterious dungeons 💥,
+                    and discover a universe full of challenges!</p>
+            </div>
+
+            <div class="explore-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>🔮 <span style="color: #00d1ff; font-weight: bold;">Explore fascinating worlds</span>, rich in magic
+                    and futuristic technology. In <em>Sword Art Online</em>, virtual reality becomes an endless
+                    adventure. Discover the secrets of <strong>Alfheim Online</strong> 🧚‍♀️, where elves master flight
+                    and magic ✨, or dive into the intense tactics of <strong>Gun Gale Online</strong>, where every shot
+                    counts 🔫. These worlds are filled with <span style="color: #ffcc00;">wonders</span> and <span
+                        style="color: #00d1ff;">hidden dangers</span> waiting to be explored.</p>
+            </div>
+
+            <div class="conclusion-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>🌟 Beyond the adventure, <em>Sword Art Online</em> is a story of <span
+                        style="color: #ffcc00; font-weight: bold;">friendship, courage</span>, and <span
+                        style="color: #00d1ff;">self-discovery</span>. Even in a virtual world, the bonds created are
+                    powerful and real ❤️. Every decision, every friendship, and every trial you overcome will shape your
+                    own legend ✨.</p>
+                <p>⚡ <span style="color: #ffcc00; font-weight: bold;">Get ready for an unforgettable adventure</span>!
+                    Whether you’re here to explore, fight, or simply be amazed, <em>Sword Art Online</em> promises an
+                    immersive experience filled with emotions, mysteries, and endless discoveries 🌐🎮.</p>
+            </div>
+        </section>
+
+        <section id="personnages" class="section">
+            <h2>Personnages</h2>
+
+            <!-- Aincrad Arc -->
+            <h3>Aincrad Arc</h3>
+            <div class="character" onclick="showCharacterInfo('kirito')">
+                <h3>Kirito (Kazuto Kirigaya)</h3>
+                <img src="img/Kirito.png" alt="Kirito" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('asuna')">
+                <h3>Asuna Yuuki</h3>
+                <img src="img/Asuna.png" alt="Asuna" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('klein')">
+                <h3>Klein (Ryotaro Tsuboi)</h3>
+                <img src="img/Klein.png" alt="Klein" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('agil')">
+                <h3>Agil (Andrew Gilbert Mills)</h3>
+                <img src="img/Agil.png" alt="Agil" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('silica')">
+                <h3>Silica (Keiko Ayano)</h3>
+                <img src="img/Silica.png" alt="Silica" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('lisbeth')">
+                <h3>Lisbeth (Rika Shinozaki)</h3>
+                <img src="img/Lisbeth.png" alt="Lisbeth" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('yui')">
+                <h3>Yui</h3>
+                <img src="img/Yui.png" alt="Yui" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('sachi')">
+                <h3>Sachi</h3>
+                <img src="img/sachi.png" alt="Sachi" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('diavel')">
+                <h3>Diavel</h3>
+                <img src="img/diavel.png" alt="Diavel" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('kuradeel')">
+                <h3>Kuradeel</h3>
+                <img src="img/Kuradeel.png" alt="Kuradeel" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('kibaou')">
+                <h3>Kibaou</h3>
+                <img src="img/Kibaou.png" alt="Kibaou" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('heathcliff')">
+                <h3>Heathcliff (Akihiko Kayaba)</h3>
+                <img src="img/Heathcliff.png" alt="Heathcliff" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('argo')">
+                <h3>Argo</h3>
+                <img src="img/Argo.png" alt="Argo" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('thinker')">
+                <h3>Thinker</h3>
+                <img src="img/Thinker.png" alt="Thinker" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('yulier')">
+                <h3>Yulier</h3>
+                <img src="img/Yulier.png" alt="Yulier" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('johnny_black')">
+                <h3>Johnny Black</h3>
+                <img src="img/Johnny Black.png" alt="Johnny Black" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('poh')">
+                <h3>PoH (Prince of Hell)</h3>
+                <img src="img/PoH.png" alt="PoH" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('grimlock')">
+                <h3>Grimlock</h3>
+                <img src="img/Grimlock.png" alt="Grimlock" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('yolko')">
+                <h3>Yolko</h3>
+                <img src="img/Yolko.png" alt="Yolko" class="character-image">
+            </div>
+
+
+            <!-- Fairy Dance Arc -->
+            <h3>Fairy Dance Arc (Alfheim Online)</h3>
+            <div class="character" onclick="showCharacterInfo('leafa')">
+                <h3>Leafa (Suguha Kirigaya)</h3>
+                <img src="img/Leafa.png" alt="Leafa" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('oberon')">
+                <h3>Oberon (Nobuyuki Sugou)</h3>
+                <img src="img/Oberon.png" alt="Oberon" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('recon')">
+                <h3>Recon (Shinichi Nagata)</h3>
+                <img src="img/Recon.png" alt="Recon" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('eugene')">
+                <h3>Eugene</h3>
+                <img src="img/Eugene.png" alt="Eugene" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('sakuya')">
+                <h3>Sakuya</h3>
+                <img src="img/Sakuya.png" alt="Sakuya" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('alicia')">
+                <h3>Alicia Rue</h3>
+                <img src="img/Alicia Rue.png" alt="Alicia" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('tonky')">
+                <h3>Tonky</h3>
+                <img src="img/Tonky.png" alt="Tonky" class="character-image">
+            </div>
+
+            <!-- Phantom Bullet Arc -->
+            <h3>Phantom Bullet Arc (Gun Gale Online)</h3>
+            <div class="character" onclick="showCharacterInfo('sinon')">
+                <h3>Sinon (Shino Asada)</h3>
+                <img src="img/Sinon.png" alt="Sinon" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('death_gun')">
+                <h3>Death Gun (Sterben)</h3>
+                <img src="img/Death Gun.png" alt="Death Gun" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('shinkawa')">
+                <h3>Shinkawa Kyouji</h3>
+                <img src="img/Shinkawa Kyouji.png" alt="Shinkawa" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('yamikaze')">
+                <h3>Yamikaze</h3>
+                <img src="img/Yamikaze.png" alt="Yamikaze" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('pale_rider')">
+                <h3>Pale Rider</h3>
+                <img src="img/Pale Rider.png" alt="Pale Rider" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('sterben')">
+                <h3>Sterben (Shouichi Shinkawa)</h3>
+                <img src="img/Sterben (Shouichi Shinkawa).png" alt="Sterben" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('dyne')">
+                <h3>Dyne</h3>
+                <img src="img/Dyne.png" alt="Dyne" class="character-image">
+            </div>
+
+            <!-- Mother's Rosario Arc -->
+            <h3>Mother's Rosario Arc</h3>
+            <div class="character" onclick="showCharacterInfo('yuuki_mr')">
+                <h3>Yuuki Konno</h3>
+                <img src="img/Yuuki Konno.png" alt="Yuuki Konno" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('siune')">
+                <h3>Siune</h3>
+                <img src="img/Siune.png" alt="Siune" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('jun')">
+                <h3>Jun</h3>
+                <img src="img/Jun.png" alt="Jun" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('tecchi')">
+                <h3>Tecchi</h3>
+                <img src="img/Tecchi.png" alt="Tecchi" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('nori')">
+                <h3>Nori</h3>
+                <img src="img/Nori.png" alt="Nori" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('talken')">
+                <h3>Talken</h3>
+                <img src="img/Talken.png" alt="Talken" class="character-image">
+            </div>
+
+            <!-- Alicization Arc -->
+            <h3>Alicization Arc</h3>
+            <div class="character" onclick="showCharacterInfo('eugeo')">
+                <h3>Eugeo</h3>
+                <img src="img/Eugeo.png" alt="Eugeo" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('alice')">
+                <h3>Alice Zuberg</h3>
+                <img src="img/Alice Zuberg.png" alt="Alice" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('quinella')">
+                <h3>Quinella (Administrator)</h3>
+                <img src="img/Quinella (Administrator).png" alt="Quinella" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('cardinal')">
+                <h3>Cardinal</h3>
+                <img src="img/Cardinal.png" alt="Cardinal" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('bercouli')">
+                <h3>Bercouli Synthesis One</h3>
+                <img src="img/Bercouli Synthesis One.png" alt="Bercouli" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('fanatio')">
+                <h3>Fanatio Synthesis Two</h3>
+                <img src="img/Fanatio Synthesis Two.png" alt="Fanatio" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('deusolbert')">
+                <h3>Deusolbert Synthesis Seven</h3>
+                <img src="img/Deusolbert Synthesis Seven.png" alt="Deusolbert" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('eldrie')">
+                <h3>Eldrie Synthesis Thirty-One</h3>
+                <img src="img/Eldrie Synthesis Thirty-One.png" alt="Eldrie" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('chudelkin')">
+                <h3>Chudelkin</h3>
+                <img src="img/Chudelkin.png" alt="Chudelkin" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('sortiliena')">
+                <h3>Sortiliena Serlut</h3>
+                <img src="img/Sortiliena Serlut.png" alt="Sortiliena" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('ronye')">
+                <h3>Ronye Arabel</h3>
+                <img src="img/Ronye Arabel.png" alt="Ronye" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('tiese')">
+                <h3>Tiese Shtolienen</h3>
+                <img src="img/Tiese Shtolienen.png" alt="Tiese" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('humbert')">
+                <h3>Humbert Zizek</h3>
+                <img src="img/Humbert Zizek.png" alt="Humbert" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('raios')">
+                <h3>Raios Antinous</h3>
+                <img src="img/Raios Antinous.png" alt="Raios" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('lipia')">
+                <h3>Lipia Zancale</h3>
+                <img src="img/Lipia Zancale.png" alt="Lipia" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('shasta')">
+                <h3>Shasta</h3>
+                <img src="img/Shasta.png" alt="Shasta" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('ishkan')">
+                <h3>Ishkan</h3>
+                <img src="img/Ishkan.png" alt="Ishkan" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('lilpilin')">
+                <h3>Lilpilin</h3>
+                <img src="img/Lilpilin.png" alt="Lilpilin" class="character-image">
+            </div>
+
+            <!-- War of Underworld Arc -->
+            <h3>War of Underworld Arc</h3>
+            <div class="character" onclick="showCharacterInfo('gabriel')">
+                <h3>Gabriel Miller (Subtilizer)</h3>
+                <img src="img/Gabriel Miller (Subtilizer).png" alt="Gabriel Miller" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('vassago')">
+                <h3>Vassago Casals</h3>
+                <img src="img/Vassago Casals.png" alt="Vassago" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('critter')">
+                <h3>Critter</h3>
+                <img src="img/Critter.png" alt="Critter" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('iskahn')">
+                <h3>Iskahn</h3>
+                <img src="img/Ishkan.png" alt="Iskahn" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('sheyta')">
+                <h3>Sheyta</h3>
+                <img src="img/Sheyta.png" alt="Sheyta" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('renly')">
+                <h3>Renly Synthesis Twenty-Seven</h3>
+                <img src="img/Renly Synthesis Twenty-Seven.png" alt="Renly" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('yanai')">
+                <h3>Yanai</h3>
+                <img src="img/Shoji Yanai.png" alt="Yanai" class="character-image">
+            </div>
+
+            <!-- Personnages des jeux vidéo -->
+            <h3>Personnages des jeux vidéo</h3>
+            <div class="character" onclick="showCharacterInfo('strea')">
+                <h3>Strea</h3>
+                <img src="img/Strea.png" alt="Strea" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('philia')">
+                <h3>Philia</h3>
+                <img src="img/Philia.png" alt="Philia" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('rain')">
+                <h3>Rain</h3>
+                <img src="img/Rain.png" alt="Rain" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('seven')">
+                <h3>Seven (Professor Nanairo)</h3>
+                <img src="img/Seven (Professor Nanairo).png" alt="Seven" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('eiji')">
+                <h3>Eiji Nochizawa (Nautilus)</h3>
+                <img src="img/Eiji Nochizawa (Nautilus).png" alt="Eiji" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('yuna')">
+                <h3>Yuna (Yuuna Shigemura)</h3>
+                <img src="img/Yuna (Yuuna Shigemura).png" alt="Yuna" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('tia')">
+                <h3>Tia</h3>
+                <img src="img/Tia.png" alt="Tia" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('premiere')">
+                <h3>Premiere</h3>
+                <img src="img/Premiere.png" alt="Premiere" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('kureha')">
+                <h3>Kureha</h3>
+                <img src="img/Kureha.png" alt="Kureha" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('zeliska')">
+                <h3>Zeliska</h3>
+                <img src="img/Zeliska.png" alt="Zeliska" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('itsuki')">
+                <h3>Itsuki</h3>
+                <img src="img/Itsuki.png" alt="Itsuki" class="character-image">
+            </div>
+            <div class="character" onclick="showCharacterInfo('bazalt')">
+                <h3>Bazalt Joe</h3>
+                <img src="img/Bazalt Joe.png" alt="Bazalt Joe" class="character-image">
+            </div>
+        </section>
+
+
+        <section id="character-info" class="section">
+            <h2 id="character-name">Character Name</h2>
+            <img id="character-img" src="" alt="Character Image" class="character-image">
+            <p id="character-description"></p>
+            <button onclick="showSection('personnages')">Back</button>
+        </section>
+
+        <section id="monde" class="section">
+            <h2>✨ The World of SAO ✨</h2><br><br>
+            <div class="sao-overview"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; border-radius: 10px;">
+                <p>🌍🎮 The world of <strong>Sword Art Online (SAO)</strong> is a captivating virtual universe where
+                    players interact in fascinating digital environments through advanced virtual reality
+                    technology. Immerse yourself in this world where every detail is designed for total immersion.
+                </p>
+            </div>
+
+            <div class="aincrad-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>The adventure begins in <strong>Aincrad</strong>, an imposing 100-floor tower, where each level
+                    reveals a unique world filled with challenges and wonders. From <span style="color: #00d1ff;">lush
+                        forests</span> 🌲 to <span style="color: #ffcc00;">snowy
+                        mountains</span> 🏔️, through <span style="color: #00d1ff;">medieval cities</span> 🏰 and
+                    dangerous dungeons full of fearsome creatures 🐉, Aincrad is a world where cooperation is key.
+                    Players must team up 🤝 to defeat powerful bosses and progress to higher floors. Each step
+                    brings you closer to freedom. 🏰🌲🗡️</p>
+            </div>
+
+            <div class="alfheim-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>In <strong>Alfheim Online (ALO)</strong>, exploration takes on a different form with a fairy-like
+                    universe where players can fly 🧚‍♂️ using wings unique to each elven race. ALO emphasizes
+                    freedom and magic ✨, featuring enchanting aerial landscapes, <span style="color: #00d1ff;">mystical
+                        forests</span> 🌳, floating fortresses 🏰, and kingdoms
+                    divided into factions. A world where imagination takes flight. 🧚‍♂️🌌✨</p>
+            </div>
+
+            <div class="ggo-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p><strong>Gun Gale Online (GGO)</strong> offers a completely different atmosphere with a
+                    post-apocalyptic world 🌆 dominated by firearms 🔫. In this world, arid landscapes 🏜️, ruined
+                    cities 🏙️, and strategic battlefields provide a tense and competitive experience. Every shot
+                    and decision counts here. 🏜️🔫💥</p>
+            </div>
+
+            <div class="underworld-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>Finally, the world of SAO expands with realms like <strong>Underworld</strong>, an advanced
+                    virtual reality 🧠 where characters have their own consciousness. In this universe, time and
+                    space ⏳ operate under unusual rules, creating a profound and unique experience. Each SAO world
+                    is vast 🌐, rich in detail, and full of adventures to discover. 🌐🕰️🌟</p>
+            </div>
+        </section>
+
+        <section id="createur" class="section">
+            <h2>🎨 Sword Art Online Creator 🎨</h2><br><br>
+            <img src="img/Créateur/Reki_Kawahara.png">
+            <div class="author-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; border-radius: 10px;">
+                <p>📜 <span style="color: #ffcc00; font-weight: bold;">Reki Kawahara</span>, born August 17, 1974,
+                    is the author of the famous series <em>Sword Art Online (SAO)</em>, which revolutionized the
+                    science fiction and fantasy genres with its innovative virtual reality concept. 🧑‍💻🎮</p>
+            </div>
+
+            <div class="writing-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>🖋️ <span style="color: #00d1ff;">Kawahara</span> began <em>Sword Art Online</em> in 2002 as a light
+                    novel, a
+                    popular type of novel in Japan, often illustrated and targeted at young adults. What started as a
+                    personal
+                    project quickly captivated a broad audience thanks to a <span style="color: #ffcc00;">complex
+                        plot</span> and
+                    deeply relatable characters. 🌟📚</p>
+            </div>
+
+            <div class="universe-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>🌍 The universe of <em>Sword Art Online</em> is a unique blend of <span
+                        style="color: #00d1ff;">virtual
+                        reality</span> and <span style="color: #ffcc00;">epic adventures</span>, where players are
+                    immersed in
+                    vibrant worlds. Kawahara brought these worlds to life with fascinating landscapes and emotional
+                    challenges,
+                    while exploring deep themes like survival, freedom, and self-discovery. 💡🕹️🌲</p>
+            </div>
+
+            <div class="adaptation-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>🎞️ The series was later adapted into <span style="color: #ffcc00;">manga</span>, <span
+                        style="color: #00d1ff;">anime</span>, and <span style="color: #ffcc00;">video games</span>,
+                    propelling
+                    Kawahara onto the international stage. The <em>Sword Art Online</em> anime, released in 2012, played
+                    a pivotal
+                    role in this global success thanks to its <span style="color: #00d1ff;">stunning visuals</span> and
+                    epic
+                    soundtrack. 🎥📀🎶</p>
+            </div>
+
+            <div class="emotions-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>❤️ What sets Reki Kawahara apart is his ability to combine <span style="color: #ffcc00;">futuristic
+                        science-fiction</span> with powerful <span style="color: #00d1ff;">emotional themes</span> like
+                    friendship,
+                    love, and loss. He also explores the boundaries between virtual and real worlds, questioning the
+                    potential
+                    dangers of complete immersion in fictional realities. 🧑‍🤝‍🧑💕🌌</p>
+            </div>
+
+            <div class="awards-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>🏆 In recognition of his significant influence on the industry, Kawahara has received numerous
+                    literary awards.
+                    His work continues to inspire generations of creators and fans around the globe. 🌟✍️</p>
+            </div>
+
+        </section>
+
+        <section id="info" class="section">
+            <h2>✨ Additional Information ✨</h2><br><br><br>
+            <div class="intro-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; border-radius: 10px; font-family: 'Georgia', serif;">
+                <p><em><span style="color: #ffcc00;">*Sword Art Online (SAO)*</span></em> is much more than just a series about
+                    video games 🎮. It delves into deep themes such as <span style="color: #00d1ff; font-weight: bold;">reality</span>, 
+                    <span style="color: #ffcc00; font-weight: bold;">technology</span>, and <span style="color: #00d1ff; font-weight: bold;">human relationships</span> 🤝. 
+                    Through its various arcs, SAO explores existential questions while offering an immersive adventure full of mystery and emotion 💫.</p>
+            </div>
+        
+            <div class="vr-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>The concept of <span style="color: #ffcc00; font-weight: bold;">virtual reality</span> in SAO invites us to
+                    reflect on the blurred boundary between the real world 🌍 and digital worlds 🌐. Players, immersed in hyper-realistic 
+                    virtual environments, must not only survive physically but also face mental and emotional challenges 💥. This raises fascinating questions: 
+                    <em style="color: #00d1ff;">What happens when reality and fiction intertwine?</em> 🧠</p>
+            </div>
+        
+            <div class="psychology-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>Moreover, <em>Sword Art Online</em> explores the <span style="color: #ffcc00; font-weight: bold;">psychology of players</span> 🧘‍♂️, 
+                particularly how online interactions influence <span style="color: #00d1ff; font-weight: bold;">social dynamics</span> and behavior 💬. 
+                Every player, whether hero or antagonist, faces moral dilemmas and choices that reveal their true character 💡. Online gaming becomes a mirror of society, 
+                where competition, cooperation, friendship, and betrayal intertwine 👫.</p>
+            </div>
+        
+            <div class="solitude-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>Another recurring theme is <span style="color: #ffcc00; font-weight: bold;">solitude</span> 🥀, seen through
+                    Kirito's journey as he often finds himself isolated in his quest to protect those he loves. However, as the
+                    story unfolds, deep bonds are formed, and <span style="color: #00d1ff; font-weight: bold;">friendship</span>
+                    becomes a powerful force to overcome challenges 🌟. These relationships are not limited to human players: AIs like Yui 🧑‍💻 and other 
+                    virtual creatures also play an essential role in this universe.</p>
+            </div>
+        
+            <div class="living-world-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>Finally, <em>SAO</em> demonstrates that video games are not just entertainment 🎮. They can become <span style="color: #ffcc00; font-weight: bold;">living worlds</span> 🌌 
+                where players create meaningful experiences, learn lessons about themselves and others, and explore new horizons. The adventures in SAO remind us that, even in a fictional world, 
+                emotions and relationships are very real ❤️.</p>
+            </div>
+        
+            <div class="technology-section"
+                style="background-color: #333366; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p><span style="color: #ffcc00; font-weight: bold;">Technology and innovations</span>: SAO also anticipates the
+                    future of immersive technologies 🔮, addressing topics like <span style="color: #00d1ff; font-weight: bold;">augmented reality</span> 
+                    and advanced <span style="color: #ffcc00; font-weight: bold;">virtual reality</span>. The NerveGear, the device used by players to dive into SAO's worlds, 
+                    inspires dreams of a future where the boundary between real and virtual almost disappears 💻🕶️. But it also warns us about the risks of excessive dependency on these technologies, 
+                    highlighting the importance of staying grounded in the real world 🌍.</p>
+            </div>
+        
+            <div class="conclusion-section"
+                style="background-color: #2d2d50; color: #ffffff; padding: 30px; margin-top: 20px; border-radius: 10px;">
+                <p>With epic battles ⚔️, unforgettable friendships 🤗, profound moral dilemmas 🧐, and futuristic technologies 🔥, 
+                <em>Sword Art Online</em> is a true journey through time, space, and the human soul. Each adventure is a reminder that, even in a game, the quest for happiness, 
+                freedom, and connection is universal 🌟💫.</p>
+            </div>
+        </section>
+        
+
+        <div class="button-container">
+            <button class="bouton-top" onclick="scrollToTop()">Haut de page</button>
+            <button class="bouton-bottom" onclick="scrollToBottom()">Bas de page</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Sword Art Online Fan Page</p>
+        </footer>
+        <div id="loading-screen"></div>
+
+        <script src="ANscript.js"></script>
+</body>
+
+</html>
